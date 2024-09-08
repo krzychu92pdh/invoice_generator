@@ -36,7 +36,7 @@ def list_of_buyers():
     with open('buyer_details.csv', newline='') as csvfile:
         csv_reader = csv.DictReader(csvfile)
         for row in csv_reader:
-            print(row["id"], row["name"])
+            print(row["id"], row["name"], row["address1"], row["address2"], row["nip"])
 
 
 def insert_buyer_details():
@@ -208,6 +208,9 @@ def convert_to_pdf():
 def move_file():
     dest_fpath = config.path
     shutil.move("faktura nr ....pdf", dest_fpath+"faktura nr....pdf")
+
+def find_buyer():
+    pass
 
 
 #####################################################################################
